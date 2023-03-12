@@ -5,19 +5,21 @@
 Можно использовать свой вариант программы из предыдущего дз, мой вариант реализован ниже
 Задание: переписать код используя как минимум 1 функцию
 """
+def on_that_day(day):# Функция запрашивающая День роджения Пушкина
+    while True:
+        if day == 6:
+            print('Верно')
+            break
+        else:
+            day = int(input('В какой день июня родился Пушкин?'))
 
-def which_year(year):
-    while year != '1799':
-        print("Не верно")
-        year = input('Ввведите год рождения А.С.Пушкина:')
-    result = print('Верно')
-    return result
-def on_that_day(day):
-    while day != '6':
-        print("Не верно")
-        day = input('В какой день июня родился Пушкин?')
-    result = print('Верно')
-    return result
+def check(year = int(input('Ввведите год рождения А.С.Пушкина:'))):
+    while True:
+        if year == 1799:
+            print('Верно')
+            on_that_day(int(input('В какой день июня родился Пушкин?')))
+            break
+        else:
+            year = int(input('Ввведите год рождения А.С.Пушкина:'))
 
-which_year(input('Ввведите год рождения А.С.Пушкина:'))
-on_that_day(input('В какой день июня родился Пушкин?'))
+check()
